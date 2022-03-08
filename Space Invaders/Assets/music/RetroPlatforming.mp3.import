@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RetroPlatforming.mp3-c7d88dc4a727ccca89b7f02fb44545ae.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/RetroPlatforming.mp3"
+dest_files=[ "res://.import/RetroPlatforming.mp3-c7d88dc4a727ccca89b7f02fb44545ae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
