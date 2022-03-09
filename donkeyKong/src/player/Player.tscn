@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assetsDk/walk2.png" type="Texture" id=1]
+[ext_resource path="res://assetsDk/walk1.png" type="Texture" id=2]
+[ext_resource path="res://src/player/Player.gd" type="Script" id=3]
+[ext_resource path="res://assetsDk/Golden Age.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 12.0
+height = 16.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 4 )
+
+[node name="player_body" type="KinematicBody2D"]
+position = Vector2( 512, 550 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 4 )
+scale = Vector2( 2.72656, 2.875 )
+frames = SubResource( 2 )
+
+[node name="player_area" type="Area2D" parent="."]
+position = Vector2( 0, 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_area"]
+shape = SubResource( 1 )
+
+[node name="canvas_player" type="CanvasLayer" parent="."]
+
+[node name="life_label" type="Label" parent="canvas_player"]
+anchor_left = 0.018
+anchor_top = 0.038
+anchor_right = 0.217
+anchor_bottom = 0.1
+margin_left = -5.432
+margin_top = -11.8
+margin_right = -10.208
+margin_bottom = -12.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playerTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="area_entered" from="player_area" to="." method="_on_player_area_area_entered"]
+[connection signal="timeout" from="playerTimer" to="." method="_on_playerTimer_timeout"]
