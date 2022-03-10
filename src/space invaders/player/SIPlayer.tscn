@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/SIassets/art/emoMCWalk1.png" type="Texture" id=1]
+[ext_resource path="res://src/space invaders/player/Ship.gd" type="Script" id=2]
+[ext_resource path="res://assets/SIassets/font/Golden Age.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11, 15.5 )
+
+[node name="SIPlayer" type="Node2D"]
+scale = Vector2( 2, 2 )
+
+[node name="Ship" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Ship"]
+texture = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Ship"]
+
+[node name="Label" type="Label" parent="Ship/CanvasLayer"]
+margin_right = 295.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Ship"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship/Area2D"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 1 )
+
+[node name="player_timer" type="Timer" parent="Ship"]
+wait_time = 3.0
+autostart = true
+
+[node name="enemy_timer" type="Timer" parent="Ship"]
+wait_time = 40.0
+autostart = true
+
+[connection signal="area_entered" from="Ship/Area2D" to="Ship" method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Ship/player_timer" to="Ship" method="_on_player_timer_timeout"]
+[connection signal="timeout" from="Ship/enemy_timer" to="Ship" method="_on_enemy_timer_timeout"]
