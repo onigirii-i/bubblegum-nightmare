@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Golden Age.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/titlescreen/Credits.gd" type="Script" id=2]
+[ext_resource path="res://assets/music/RetroPlatforming.mp3" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+extra_spacing_top = 20
+font_data = ExtResource( 1 )
+
+[node name="Credits" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 1 )
+text = "Credits:
+Game Engine: Godot Engine
+
+Music: 
+All music was taken from Fesliyan Studios:
+Retro Platforming by David Fesliyan
+8 - bit Adventure by David Renda
+Boss Time by David Renda
+
+Images and Sprites: 
+All 8-bit sprites were made by the developers on Piskelapp Sprite Maker
+
+Fonts:
+Golden-Age font borrowed from DaFont
+
+press tab key to return to titlescreen
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/SIassets/font/Golden Age.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/space invaders/end scenes/GamePassed.gd" type="Script" id=2]
+[ext_resource path="res://assets/SIassets/music/8BitAdventure.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/assetsDk/Golden Age.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 4 )
+
+[node name="GamePassed" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1021.0
+margin_bottom = 594.0
+rect_pivot_offset = Vector2( 400, 104 )
+custom_fonts/font = SubResource( 1 )
+text = "Game Complete!"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 576.0
+margin_right = 1024.0
+margin_bottom = 594.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "<- press tab key to retry                                                         press enter key to return to title screen ->"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
