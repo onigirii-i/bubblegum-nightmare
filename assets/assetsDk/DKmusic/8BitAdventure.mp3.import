@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8BitAdventure.mp3-d9535ba99fb4da9a3568f7e8500be474.mp3str"
+
+[deps]
+
+source_file="res://assets/assetsDk/DKmusic/8BitAdventure.mp3"
+dest_files=[ "res://.import/8BitAdventure.mp3-d9535ba99fb4da9a3568f7e8500be474.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

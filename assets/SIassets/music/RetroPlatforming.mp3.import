@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RetroPlatforming.mp3-a2211b5dbe91380a133d94c16f59a53c.mp3str"
+
+[deps]
+
+source_file="res://assets/SIassets/music/RetroPlatforming.mp3"
+dest_files=[ "res://.import/RetroPlatforming.mp3-a2211b5dbe91380a133d94c16f59a53c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

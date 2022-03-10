@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CastleOfFearSlow.mp3-d11f68996e520b61d55a0c24996af58d.mp3str"
+
+[deps]
+
+source_file="res://assets/assetsDk/DKmusic/CastleOfFearSlow.mp3"
+dest_files=[ "res://.import/CastleOfFearSlow.mp3-d11f68996e520b61d55a0c24996af58d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

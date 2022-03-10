@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RetroForestSlow.mp3-e542cd06ce0e7d160fc580d66f09cfbc.mp3str"
+
+[deps]
+
+source_file="res://assets/Fassets/froggerMusic/RetroForestSlow.mp3"
+dest_files=[ "res://.import/RetroForestSlow.mp3-e542cd06ce0e7d160fc580d66f09cfbc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

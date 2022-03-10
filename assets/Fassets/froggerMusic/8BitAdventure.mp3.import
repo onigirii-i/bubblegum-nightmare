@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8BitAdventure.mp3-7eff4091675029038040f4c50c195e26.mp3str"
+
+[deps]
+
+source_file="res://assets/Fassets/froggerMusic/8BitAdventure.mp3"
+dest_files=[ "res://.import/8BitAdventure.mp3-7eff4091675029038040f4c50c195e26.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
